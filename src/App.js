@@ -53,7 +53,6 @@ function App() {
 
   return (
     <>
-     <Router>
       <Navbar
         title="TextUtils"
         about="About Us"
@@ -61,25 +60,13 @@ function App() {
         togglemode={togglemode}
       />
       <Alert alert={alert} />
-      <Switch>
-        <Route exact path="/about">
-          <About mode={mode}/>
-        </Route>
-        <Route exact path="/contact">
-          <Contact mode={mode}/>
-        </Route>
-        <Route exact path="/">
+      
             <TextForm
             heading="TextUtis - Word Counter, Charecter Counter, Remove Extra Space"
             summaryHead="Summery Of Your Text"
             mode={mode}
             showAlert={showAlert}
             />
-        </Route>
-      </Switch>
-
-      <Footer creatername="Shubham Bawankar" />
-      </Router>
     </>
   );
 }
